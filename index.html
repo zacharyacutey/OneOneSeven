@@ -16,7 +16,7 @@
 			display : inline-block;
 		}
 		.obstacle {
-		  border-style : none;
+		  	border-style : none;
 			background-color : black;
 			height : 75px;
 			width : 75px;
@@ -29,6 +29,7 @@ var x = 0,
 y = 0;
 function NOTHING_TEXT(x,y){return "<div class='nothing' id='p"+(x+10)+"_"+(y+10)+"'></div>"; }
 function PLAYER_TEXT(x,y){return "<div class='player' id='p"+(x+10)+"_"+(y+10)+"'></div>"; }
+function OBSTACLE_TEXT(x,y){return "<div class='player' id='p"+(x+10)+"_"+(y+10)"'></div>"; }
 function display()
 {
 	var i = SIZE;
