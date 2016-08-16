@@ -10,4 +10,6 @@ or
 
 B.) work on the project together tonight and tomorrow
 
-Answer: 
+Answer: A
+
+(Don't forget, only sprint 1. AKA jumping mechanics.)
