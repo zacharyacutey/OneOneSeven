@@ -5,7 +5,7 @@ var y = 0; //The y position
 function NOTHING_TEXT(x,y){return "<div class='nothing' id='p"+x+"_"+y+"'></div>"; } //The div with nothing in it
 function PLAYER_TEXT(x,y){return "<div class='player' id='p"+x+"_"+y+"'></div>"; } //The divs with the player in it
 function OBSTACLE_TEXT(x,y){return "<div class='obstacle' id='p"+x+"_"+y"'></div>"; } //The divs with the platforms
-function display() //returns the text
+function init_display() //returns the text
 {
 	var i = SIZE-1;
 	var j = 0;
@@ -23,8 +23,10 @@ function display() //returns the text
 	}
 	return res;
 }
-function moveLeft() {
-	if(!())
+function display()
+{
+	document.getElementsByClassName("player")[0].className="nothing";
+	document.getElementById("p"+x+"_"+y).className="player";
 }
 function keydown(event)
 {
