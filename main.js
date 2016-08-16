@@ -1,10 +1,11 @@
-var SIZE = 3; //This is old and reused code, too lazy to comment it all out.
-var x = 0;
-var y = 0;
-function NOTHING_TEXT(x,y){return "<div class='nothing' id='p"+x+"_"+y+"'></div>"; }
-function PLAYER_TEXT(x,y){return "<div class='player' id='p"+x+"_"+y+"'></div>"; }
-function OBSTACLE_TEXT(x,y){return "<div class='obstacle' id='p"+x+"_"+y"'></div>"; }
-function display()
+var SIZE = 3; //The size of the array of boxes
+var JUMP_HEIGHT = 2; //The height that the player can jump.
+var x = 0; //The x position
+var y = 0; //The y position
+function NOTHING_TEXT(x,y){return "<div class='nothing' id='p"+x+"_"+y+"'></div>"; } //The div with nothing in it
+function PLAYER_TEXT(x,y){return "<div class='player' id='p"+x+"_"+y+"'></div>"; } //The divs with the player in it
+function OBSTACLE_TEXT(x,y){return "<div class='obstacle' id='p"+x+"_"+y"'></div>"; } //The divs with the platforms
+function display() //returns the text
 {
 	var i = SIZE-1;
 	var j = 0;
@@ -22,10 +23,13 @@ function display()
 	}
 	return res;
 }
+function moveLeft() {
+	if(!())
+}
 function keydown(event)
 {
 	//Remeber the property used for the key pressed. And the arrow keys
-	//ARROW KEY LEFT
-	//ARROW KEY RIGHT
-	//ARROW KEY UP
+	//ARROW KEY LEFT OR A- Moves the player left, and then falls or jumps
+	//ARROW KEY RIGHT OR D- Moves the player right, and then falls or jumps
+	//ARROW KEY UP OR W- Jumps or does nothing
 }
