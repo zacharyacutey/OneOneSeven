@@ -1,0 +1,58 @@
+<html>
+<head>
+	<style>
+		.nothing {
+			border-style : none;
+			background-color : white;
+			height : 75px;
+			width : 75px;
+			display : inline-block;
+		}
+		.player {
+			border-style : none;
+			background-color : red;
+			height : 75px;
+			width : 75px;
+			display : inline-block;
+		}
+		.obstacle {
+		  border-style : none;
+			background-color : black;
+			height : 75px;
+			width : 75px;
+			display : inline-block;
+		}
+	</style>
+<script>
+var SIZE = 3;
+var x = 0,
+y = 0;
+function NOTHING_TEXT(x,y){return "<div class='nothing' id='p"+(x+10)+"_"+(y+10)+"'></div>"; }
+function PLAYER_TEXT(x,y){return "<div class='player' id='p"+(x+10)+"_"+(y+10)+"'></div>"; }
+function display()
+{
+	var i = SIZE;
+	var j = -SIZE;
+	var res = "";
+	while(i!=-SIZE-1)
+	{
+		j = -SIZE;
+		while(j!=SIZE+1)
+		{
+			res += (i == y && j == x) ? PLAYER_TEXT(j,i) : NOTHING_TEXT(j,i);
+			j++;
+		}
+		res += "<br>";
+		i--;
+	}
+	return res;
+}
+</script>
+</head>
+<body onkeydown="keydown(event)" id="body">
+</body>
+<script>
+document.body.innerHTML = display();
+</script>
+</html>
+
