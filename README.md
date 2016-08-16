@@ -2,7 +2,7 @@
 1.1.7 In JS
 
 
-Next to line 11, say whether you'd like to either 
+Next to line 13, say whether you'd like to either 
 
 A.) work separately tonight, and work on the project of whoever's further tomorrow morning
 
