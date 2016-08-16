@@ -13,3 +13,5 @@ B.) work on the project together tonight and tomorrow
 Answer: A
 
 (Don't forget, only sprint 1. AKA jumping mechanics.)
+
+Garrett: Okay, I'll keep that in mind.
