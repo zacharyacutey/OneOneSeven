@@ -5,7 +5,7 @@ var JUMP_HEIGHT = 2; //The height that the player can jump.
 var x = 0; //The x position
 var y = 0; //The y position
 
-var direction=0; //1 is up, 0 is no vertical movement, -1 is downards vertical
+var direction=0; //1 is up, 0 is no vertical movement or downwards.
 var increments=0; //The number of movements to go till it stop
 
 function NOTHING_TEXT(x,y){return "<div class='nothing' id='p"+x+"_"+y+"'></div>"; } //The div with nothing in it
