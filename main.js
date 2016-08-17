@@ -36,7 +36,7 @@ function display() //Redisplays the screen, by turning the previous player posit
 }
 function set_obstacle(x,y)
 {
-	documeent.getElementById("p"+x+"_"+y).className = "obstacle"
+	document.getElementById("p"+x+"_"+y).className = "obstacle"
 }
 function makeOnMap() //Makes the position ON the map
 {
@@ -45,9 +45,18 @@ function makeOnMap() //Makes the position ON the map
 	if(y == -1) y++; //Below the screen, shouldn't happen, but moves player up one square
 	if(y == SIZE) y--; //Above the screen, causes player to move down for now
 }
+function getpixelclass(x,y)
+{
+	try{ return document.getElementById("p"+x+"_"+y).className; }
+	catch(e) {return "player";}
+}
 function leftArrow() //The code for the left arrow or the 'a' key being pressed
 {
 	x--; //Move position to the left
+	if(getpixelclass(x,y) == "obstacle")
+	{
+		x++;
+	}
 	makeOnMap(); //Adjust to fit on the screen
 	otherKey(); //Cause vertical movement
 	display(); //Display
@@ -55,13 +64,19 @@ function leftArrow() //The code for the left arrow or the 'a' key being pressed
 function rightArrow() //Right arrow or the 'd' key
 {
 	x++; //Move position to right
+	if(getpixelclass(x,y) == "obstacle")
+	{
+		x--;
+	}
 	makeOnMap(); //Adjust to fit on screen
 	otherKey(); //Cause vertical movement
 	display(); //Display
 }
 function isStanding()
 {
-	return y == 0; //If the player is at the bottom of the screen
+	if(y == 0) return true; //If the player is at the bottom of the screen
+	if(getpixelclass(x,y-1)=="obstacle") return true;
+	return false;
 }
 function upArrow() //Up arrow or the 'w' key
 {
@@ -79,6 +94,7 @@ function otherKey() //Force to move down, or some other key is pressed
 	{
 		increments--; //Decrease (increases of y) by
 		y++; //Increase y by 1
+		if(getpixelclass(x,y-(y==SIZE))=="obstacle") { y--; increments = 0; direction = 0;}
 		makeOnMap(); //Adjust position to fit on the map
 	}
 	else if(isStanding()) //If it is not jumping and on a platform
