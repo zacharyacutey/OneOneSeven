@@ -34,6 +34,10 @@ function display() //Redisplays the screen, by turning the previous player posit
 	document.getElementsByClassName("player")[0].className="nothing"; //White square, no player
 	document.getElementById("p"+x+"_"+y).className="player"; //Red square, the player
 }
+function set_obstacle(x,y)
+{
+	documeent.getElementById("p"+x+"_"+y).className = "obstacle"
+}
 function makeOnMap() //Makes the position ON the map
 {
 	if(x == -1) x++; //Off the left side of the screen, move right one
