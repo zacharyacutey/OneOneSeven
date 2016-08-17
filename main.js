@@ -31,8 +31,8 @@ function init_display() //returns the initial text
 }
 function display() //Redisplays the screen, by turning the previous player position to the 'nothing' class, and the current player position to the 'player' class
 {
-	document.getElementsByClassName("player")[0].className="nothing";
-	document.getElementById("p"+x+"_"+y).className="player";
+	document.getElementsByClassName("player")[0].className="nothing"; //White square, no player
+	document.getElementById("p"+x+"_"+y).className="player"; //Red square, the player
 }
 function makeOnMap() //Makes the position ON the map
 {
@@ -81,10 +81,10 @@ function otherKey() //Force to move down, or some other key is pressed
 	{
 		//Do nothing
 	}
-	else //Otherwise
+	else //Otherwise, not on a platform and should fall down
 	{
-		y--;
-		makeOnMap();
+		y--; //Cause to move down
+		makeOnMap(); //Adjust position
 	}
 	display(); //Display to the screen
 }
