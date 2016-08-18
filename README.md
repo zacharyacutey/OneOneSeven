@@ -2,16 +2,8 @@
 1.1.7 In JS
 
 
-Next to line 13, say whether you'd like to either 
+Links to pictures:
 
-A.) work separately tonight, and work on the project of whoever's further tomorrow morning
-
-or
-
-B.) work on the project together tonight and tomorrow
-
-Answer: A
-
-(Don't forget, only sprint 1. AKA jumping mechanics.)
-
-Garrett: Okay, I'll keep that in mind.
+Level 1: http://www.wallpaperdirect.com/wdimages/043159orig.jpg
+Level 2: http://www.newsread.in/wp-content/uploads/2016/06/Volcano-5.jpg
+Level 3: http://abcnews.go.com/images/International/EPA_volcano_ml_160307.jpg
